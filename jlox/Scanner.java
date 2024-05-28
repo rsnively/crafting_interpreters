@@ -42,6 +42,7 @@ public class Scanner {
             start = current;
             scanToken();
         }
+        tokens.add(new Token(TokenType.EOF, "", null, line));
         return tokens;
     }
 
