@@ -19,6 +19,8 @@ public class GenerateAst {
                 "Unary : Token operator, Expr right"));
     }
 
+    private static String spacing = "    ";
+
     private static void defineAst(String outputDir, String baseName, List<String> types) throws IOException {
         String path = outputDir + "/" + baseName + ".java";
         PrintWriter writer = new PrintWriter(path, "UTF-8");
@@ -29,18 +31,22 @@ public class GenerateAst {
         writer.println();
         writer.println("public abstract class " + baseName + " {");
 
+        defineVisitor(writer, baseName, types);
+
         for (String type : types) {
             String className = type.split(":")[0].trim();
             String fields = type.split(":")[1].trim();
             defineType(writer, baseName, className, fields);
         }
 
+        writer.println();
+        writer.println(spacing + "abstract <R> R accept(Visitor<R> visitor);");
+
         writer.println("}");
         writer.close();
     }
 
     private static void defineType(PrintWriter writer, String baseName, String className, String fieldList) {
-        String spacing = "    ";
         writer.println(spacing + "static class " + className + " extends " + baseName + " {");
 
         // Fields
@@ -58,6 +64,23 @@ public class GenerateAst {
         }
         writer.println(spacing + spacing + "}");
 
+        // Visitor pattern
+        writer.println();
+        writer.println(spacing + spacing + "@Override");
+        writer.println(spacing + spacing + "<R> R accept(Visitor<R> visitor) {");
+        writer.println(spacing + spacing + spacing + "return visitor.visit" + className + baseName + "(this);");
+        writer.println(spacing + spacing + "}");
+
+        writer.println(spacing + "}");
+    }
+
+    private static void defineVisitor(PrintWriter writer, String baseName, List<String> types) {
+        writer.println(spacing + "interface Visitor<R> {");
+        for (String type : types) {
+            String typeName = type.split(":")[0].trim();
+            writer.println(spacing + spacing + "R visit" + typeName + baseName + "(" + typeName + " "
+                    + baseName.toLowerCase() + ");");
+        }
         writer.println(spacing + "}");
     }
 }
