@@ -216,6 +216,6 @@ public class Scanner {
             type = TokenType.IDENTIFIER;
         }
 
-        addToken(TokenType.IDENTIFIER);
+        addToken(type);
     }
 }
