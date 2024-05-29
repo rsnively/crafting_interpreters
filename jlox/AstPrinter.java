@@ -1,6 +1,20 @@
-public class AstPrinter implements Expr.Visitor<String> {
+public class AstPrinter implements Expr.Visitor<String>, Stmt.Visitor<String> {
+    public String print(Stmt stmt) {
+        return stmt.accept(this);
+    }
+
     public String print(Expr expr) {
         return expr.accept(this);
+    }
+
+    @Override
+    public String visitPrintStmt(Stmt.Print stmt) {
+        return parenthesize("print", stmt.expression);
+    }
+
+    @Override
+    public String visitExpressionStmt(Stmt.Expression stmt) {
+        return print(stmt.expression);
     }
 
     @Override
