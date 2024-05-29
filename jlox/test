@@ -1,0 +1,12 @@
+./doBuild
+
+cd tests
+for i in *
+do
+    if test -f "$i"
+    then
+        cd ../build
+        java Lox ../tests/$i
+        cd ../tests
+    fi
+done

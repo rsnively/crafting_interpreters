@@ -1,0 +1,6 @@
+javac tools/*.java -d build/tools
+cd build/tools
+java tools.GenerateAst ../..
+cd ../..
+
+javac *.java -d build
