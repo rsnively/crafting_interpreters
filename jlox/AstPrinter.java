@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class AstPrinter implements Expr.Visitor<String> {
     public String print(Expr expr) {
         return expr.accept(this);
@@ -6,6 +8,22 @@ public class AstPrinter implements Expr.Visitor<String> {
     @Override
     public String visitBinaryExpr(Expr.Binary expr) {
         return parenthesize(expr.operator.lexeme, expr.left, expr.right);
+    }
+
+    @Override
+    public String visitCallExpr(Expr.Call expr) {
+        StringBuilder builder = new StringBuilder();
+        builder.append("(");
+        builder.append("call ");
+        builder.append(print(expr.callee));
+        builder.append("(");
+        for (Expr argument : expr.arguments) {
+            builder.append(print(argument));
+            builder.append(", ");
+        }
+        builder.append(")");
+        builder.append(")");
+        return builder.toString();
     }
 
     @Override
