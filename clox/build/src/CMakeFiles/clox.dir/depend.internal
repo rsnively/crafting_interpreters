@@ -6,9 +6,15 @@ src/CMakeFiles/clox.dir/chunk.c.o
  /Users/rory/Documents/projects/crafting_interpreters/clox/src/chunk.h
  /Users/rory/Documents/projects/crafting_interpreters/clox/src/common.h
  /Users/rory/Documents/projects/crafting_interpreters/clox/src/memory.h
+src/CMakeFiles/clox.dir/debug.c.o
+ /Users/rory/Documents/projects/crafting_interpreters/clox/src/chunk.h
+ /Users/rory/Documents/projects/crafting_interpreters/clox/src/common.h
+ /Users/rory/Documents/projects/crafting_interpreters/clox/src/debug.c
+ /Users/rory/Documents/projects/crafting_interpreters/clox/src/debug.h
 src/CMakeFiles/clox.dir/main.c.o
  /Users/rory/Documents/projects/crafting_interpreters/clox/src/chunk.h
  /Users/rory/Documents/projects/crafting_interpreters/clox/src/common.h
+ /Users/rory/Documents/projects/crafting_interpreters/clox/src/debug.h
  /Users/rory/Documents/projects/crafting_interpreters/clox/src/main.c
 src/CMakeFiles/clox.dir/memory.c.o
  /Users/rory/Documents/projects/crafting_interpreters/clox/src/common.h

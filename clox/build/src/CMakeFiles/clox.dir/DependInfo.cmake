@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/rory/Documents/projects/crafting_interpreters/clox/src/chunk.c" "/Users/rory/Documents/projects/crafting_interpreters/clox/build/src/CMakeFiles/clox.dir/chunk.c.o"
+  "/Users/rory/Documents/projects/crafting_interpreters/clox/src/debug.c" "/Users/rory/Documents/projects/crafting_interpreters/clox/build/src/CMakeFiles/clox.dir/debug.c.o"
   "/Users/rory/Documents/projects/crafting_interpreters/clox/src/main.c" "/Users/rory/Documents/projects/crafting_interpreters/clox/build/src/CMakeFiles/clox.dir/main.c.o"
   "/Users/rory/Documents/projects/crafting_interpreters/clox/src/memory.c" "/Users/rory/Documents/projects/crafting_interpreters/clox/build/src/CMakeFiles/clox.dir/memory.c.o"
   )
