@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/rory/Documents/projects/crafting_interpreters/clox/src/chunk.c
+stdlib.h
+-
+chunk.h
+/Users/rory/Documents/projects/crafting_interpreters/clox/src/chunk.h
+memory.h
+/Users/rory/Documents/projects/crafting_interpreters/clox/src/memory.h
+
+/Users/rory/Documents/projects/crafting_interpreters/clox/src/chunk.h
+common.h
+/Users/rory/Documents/projects/crafting_interpreters/clox/src/common.h
+
+/Users/rory/Documents/projects/crafting_interpreters/clox/src/common.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+
+/Users/rory/Documents/projects/crafting_interpreters/clox/src/main.c
+common.h
+/Users/rory/Documents/projects/crafting_interpreters/clox/src/common.h
+chunk.h
+/Users/rory/Documents/projects/crafting_interpreters/clox/src/chunk.h
+stdio.h
+-
+
+/Users/rory/Documents/projects/crafting_interpreters/clox/src/memory.c
+stdlib.h
+-
+memory.h
+/Users/rory/Documents/projects/crafting_interpreters/clox/src/memory.h
+
+/Users/rory/Documents/projects/crafting_interpreters/clox/src/memory.h
+common.h
+/Users/rory/Documents/projects/crafting_interpreters/clox/src/common.h
+
