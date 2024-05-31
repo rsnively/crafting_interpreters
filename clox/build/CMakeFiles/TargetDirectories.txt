@@ -1,6 +1,0 @@
-/Users/rory/Documents/projects/crafting_interpreters/clox/build/CMakeFiles/rebuild_cache.dir
-/Users/rory/Documents/projects/crafting_interpreters/clox/build/CMakeFiles/edit_cache.dir
-/Users/rory/Documents/projects/crafting_interpreters/clox/build/CMakeFiles/run.dir
-/Users/rory/Documents/projects/crafting_interpreters/clox/build/src/CMakeFiles/rebuild_cache.dir
-/Users/rory/Documents/projects/crafting_interpreters/clox/build/src/CMakeFiles/edit_cache.dir
-/Users/rory/Documents/projects/crafting_interpreters/clox/build/src/CMakeFiles/clox.dir
