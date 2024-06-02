@@ -5,4 +5,5 @@ add_executable(clox
     debug.c
     memory.c
     value.c
+    vm.c
 )
