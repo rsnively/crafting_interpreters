@@ -148,7 +148,7 @@ void printObject(Value value)
         printf("%s", AS_CLASS(value)->name->chars);
         break;
     case OBJ_CLOSURE:
-        printFunction(AS_CLOSURE(value));
+        printFunction(AS_CLOSURE(value)->function);
         break;
     case OBJ_FUNCTION:
         printFunction(AS_FUNCTION(value));
