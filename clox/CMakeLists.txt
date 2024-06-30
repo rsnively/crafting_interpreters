@@ -12,3 +12,9 @@ add_custom_target(run
     COMMAND clox
     DEPENDS clox
     WORKING_DIRECTORY ${CMAKE_PROJECT_DIR})
+
+
+add_custom_target(test
+    COMMAND clox $(TEST)
+    DEPENDS clox
+    WORKING_DIRECTORY ${CMAKE_PROJECT_DIR})
